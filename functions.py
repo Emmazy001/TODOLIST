@@ -6,21 +6,31 @@ def view_tasks(zipped):
 
 
 def add_tasks(tasks,keys):
-    y = input('Enter Task:')
-    tasks.append(y)
-    keys.append(len(tasks))
-    zipped = (zip(keys, tasks))
-    print('your tasks for today:')
-    for i, j in zipped:
-        print(i, j)
+    while True:
+        try:
+            y = input('Enter Task:')
+            tasks.append(y)
+            keys.append(len(tasks))
+            zipped = (zip(keys, tasks))
+            print('your tasks for today:')
+            for i, j in zipped:
+                print(i, j)
+            break
+        except ValueError:
+            print('invalid input')
 
 def remove_tasks(tasks,keys):
-    y = int(input('Enter Task number:'))
-    tasks.pop(y - 1)
-    keys.pop()
-    zipped = (zip(keys, tasks))
-    print('your tasks for today:')
-    for i, j in zipped:
-        print(i, j)
+    while True:
+        try:
+            y = int(input('Enter Task number:'))
+            tasks.pop(y - 1)
+            keys.pop()
+            zipped = (zip(keys, tasks))
+            print('your tasks for today:')
+            for i, j in zipped:
+                print(i, j)
+            break
+        except ValueError:
+            print('invalid input')
 
 

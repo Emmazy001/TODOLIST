@@ -37,6 +37,7 @@ def main():
                remove_tasks(tasks,keys)
 
             elif choice==4:
+                print('Goodbye')
                 break
             else:
                 print('invalid choice')
